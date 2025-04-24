@@ -1,0 +1,20 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.*  # si tenés varios envs (como .env.production)
+
+# Archivos de sistema
+.DS_Store
+
+# Logs y caché
+*.log
+npm-debug.log*
+
+# Docker (solo si generás archivos temporales)
+# docker-compose/  <-- Solo si es una carpeta temporal
+
+# No ignores esto (estos van al repo)
+# docker-compose.yml
+# Dockerfile

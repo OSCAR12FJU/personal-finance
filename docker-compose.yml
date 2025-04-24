@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: node-ts-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Cambiá si usás otro
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - db
+
+  db:
+    container_name: postgres-db
+    image: postgres:15-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: myappdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

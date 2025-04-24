@@ -1,0 +1,15 @@
+{
+  "2025-04": {
+    "ingresos": [
+      {
+        "description": "Rappi(efectivo)",
+        "amount": 10000,
+        "date": "2025-04-24T19:17:22.000Z",
+        "typeIncome": false
+      }
+    ],
+    "gastos": [],
+    "totalIngresos": 10000,
+    "totalGastos": 0
+  }
+}
