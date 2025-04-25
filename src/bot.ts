@@ -34,8 +34,6 @@ const balanceAction =  (bot: Telegraf) =>{
 
 }
 
-
-
 //Principal
 const setUpFinanceRoutes = (bot: Telegraf) =>{
     conditionText(bot);

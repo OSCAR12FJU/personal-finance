@@ -55,11 +55,11 @@ export const handleListExpenses = async (ctx: Context) =>{
             date.getMonth() + 1
         );
 
-        if(!gaste.items.length){
+        if(!gaste.gastos.length){
             return ctx.reply("📭 No hay gastos este mes");
         }
 
-        const formated = gaste.items.map((g,i) =>
+        const formated = gaste.gastos.map((g,i) =>
             `${i + 1}. ${g.description}: $${g.amount}`).join("\n")
         
         await ctx.reply(`📋 Gastos del mes:\n\n${formated}`);

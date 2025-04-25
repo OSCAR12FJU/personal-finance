@@ -50,11 +50,11 @@ export const handleListIncomes = async (ctx: Context) =>{
             date.getMonth() + 1
         );
 
-        if(!income.items.length){
+        if(!income.ingresos.length){
             return ctx.reply("📭 No hay ingresos este mes");
         }
 
-        const formated = income.items.map((inc,index) =>
+        const formated = income.ingresos.map((inc,index) =>
             `${index + 1}. ${inc.description}: $${inc.amount}`).join("\n")
         await ctx.reply(`📋Ingreso del mes:\n\n${formated}`);
     }catch(error){

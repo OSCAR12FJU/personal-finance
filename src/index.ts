@@ -24,7 +24,6 @@ const bot = new Telegraf(process.env.BOT_TOKEN || '7727167193:AAEoX8ZJhevfUmHbOP
     });
   
     setUpFinanceRoutes(bot);
-    
   
     bot.launch();
     console.log("🤖 Bot funcionando correctamente");
